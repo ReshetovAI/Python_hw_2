@@ -6,14 +6,14 @@
 # 6782 -> 23
 # 0,56 -> 11
 
-def sum_number(n: float) -> int:
-    num=int(str(n).replace('.', ''))
-    sum = 0
-    while num != 0:
-        sum = sum + num%10
-        num //= 10
-    return sum
 
-n = float(input('Введите вещественное число: '))
-sum = sum_number(n)
-print(sum)
+from random import uniform
+
+n = round(uniform(1, 100), 2)
+
+def sum_digit(n):
+    return sum(map(int, list(str(n).replace('.',''))))
+
+print('Рандомное вещественное число: ', n)
+print('Сумма чисел вещественного числа =', sum_digit(n))
+
