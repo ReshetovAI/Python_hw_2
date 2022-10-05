@@ -10,5 +10,5 @@ value = 1
 for i in range(1, number_N + 1):
     nums.append(value)
     value *= i + 1
-print('Набор произведений чисел от 1 до N', nums)
+print(f"Набор произведений чисел от 1 до {number_N}: {nums}")
 
